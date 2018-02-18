@@ -1,15 +1,47 @@
 body {
   font-family: 'Play', sans-serif;
   margin: 0;
-  background: #3e5151; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #3e5151, #decba4); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #3e5151, #decba4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#waveVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.header__content {
+    position: fixed;
+    top: 100px;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.header__footer {
+  position: fixed;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__footer-text {
+  font-size: 16px;
+}
+.header__footer-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
 }
 
 .main__header{
   grid-area: header;
   height: 60px;
-  background-color: #1d1d1d;
+  background-color: rgba(200, 200, 200, 0.5);
 }
 
 .main__body {
@@ -38,16 +70,14 @@ body {
   align-items: center;
   justify-content: center;
   height: 400px;
-  background: #355C7D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .main__title {
   text-align: center;
   color: #fff;
   font-size: 100px;
-  padding: 40px 20px;
+  padding: 40px 32px;
+  background-color: rgba(200, 200, 200, 0.2);
 }
 
 @media (max-width: 800px) {
@@ -57,7 +87,7 @@ body {
 
   .main__title {
     font-size: 60px;
-    padding: 8px 4px;
+    padding: 20px;
   }
 }
 
@@ -67,23 +97,47 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  background-color: #1d1d1d;
 }
 
 .main__download-title {
   text-align: center;
   font-size: 40px;
+  margin: 60px 0 0;
 }
 
 .main__download-box {
-  display: block;
-  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.main__check_channel {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.main__check-video-title {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
 }
 
 .main__download-link {
+  display: block;
   color: #fff;
   text-decoration: none;
   margin: 4px;
+}
+
+.main__download-image {
+  width: 200px;
+}
+
+.main__check-video-image {
+  width: 100px;
 }
 
 .main__download-link:hover {
